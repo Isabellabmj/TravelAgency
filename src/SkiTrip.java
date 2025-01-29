@@ -11,4 +11,15 @@ public class SkiTrip extends Trip
         this.typeOfgear = typeOfGear;
         this.liftCardPrice = liftCardPrice;
     }
+
+    public String typeOfGear()
+    {
+        return typeOfgear;
+    }
+
+    public int getliftCardPrice()
+    {
+        return liftCardPrice;
+    }
+
 }

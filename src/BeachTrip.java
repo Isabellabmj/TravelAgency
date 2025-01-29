@@ -12,4 +12,13 @@ public class BeachTrip extends Trip
         this.inflatableAnimal = inflatableAnimal;
     }
 
+    public String getBeachName()
+    {
+        return beachName;
+    }
+
+    public Boolean getInflatableAnimal()
+    {
+        return inflatableAnimal;
+    }
 }

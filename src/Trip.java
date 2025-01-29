@@ -15,6 +15,27 @@ public class Trip
         this.adventures = adventures;
     }
 
+    public String getCountry()
+    {
+        return country;
+    }
+
+    public int getDuration()
+    {
+        return duration;
+    }
+
+    public String getVacationType()
+    {
+        return vacationType;
+    }
+
+    public String getAdventures()
+    {
+        return adventures;
+    }
+
+
 
 
 }
