@@ -19,9 +19,9 @@ public class Main
             System.out.println("2. add a beach trip");
             System.out.println("3. show all trips that you have planned");
             System.out.println("4. edit a trip you have already planned");
-            System.out.println("5. finish");
+            System.out.println("5. finish" + "\n");
 
-            System.out.println("choose what you want to do");
+            System.out.println("Enter the number that corresponds to what you want to do.");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -29,12 +29,12 @@ public class Main
             switch(choice)
             {
                 case 1:
-                    createSkiTrip(scanner);
+                    createSkiTrip();
                     break;
 
 
                 case 2:
-                    createBeachTrip(scanner);
+                    createBeachTrip();
                         break;
 
                 case 3:
@@ -63,7 +63,7 @@ public class Main
 
     }
 
-    private static void createSkiTrip(Scanner scanner)
+    private static void createSkiTrip()
     {
         System.out.println("Plan a ski trip");
         System.out.println("enter the country:");
@@ -88,7 +88,7 @@ public class Main
 
     }
 
-    private static void createBeachTrip(Scanner scanner)
+    private static void createBeachTrip()
     {
         System.out.println("Plan a beach trip");
         System.out.println("Enter the country:");
@@ -138,17 +138,17 @@ public class Main
 
         showAllTrips();
         System.out.println("Choose the number of the trip you want to edit: ");
-        int index = scanner.nextInt();
+        int index = scanner.nextInt(); //Vi opretter index hvor indput fra brugeren er det tal der bliver "sat ind" for index.
         scanner.nextLine();
 
-        if(index < 1 || index >= trips.size())
+        if(index < 1 || index > trips.size())
         {
             System.out.println("error, try again");
 
             return;
         }
 
-        Trip trip = trips.get(index - 1);
+        Trip trip = trips.get(index - 1); //vi opretter en variabel trip, hvor vi kalder på et index nr. i Arraylisten trips, vi siger -1 fordi index altid starter med 0
         System.out.println("You have chosen this trip to edit: " + "\n" + trip);
 
         System.out.println("What do you want to edit:");
