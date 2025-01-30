@@ -22,6 +22,16 @@ public class BeachTrip extends Trip
         return inflatableAnimal;
     }
 
+    public void setBeachName(String beachName)
+    {
+        this.beachName = beachName;
+    }
+
+    public void setInflatableAnimal(Boolean inflatableAnimal)
+    {
+        this.inflatableAnimal = inflatableAnimal;
+    }
+
     @Override
     public String toString()
     {

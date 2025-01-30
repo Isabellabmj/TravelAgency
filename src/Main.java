@@ -156,6 +156,17 @@ public class Main
         System.out.println("2. Duration");
         System.out.println("3. Date");
         System.out.println("4. Adventures");
+        if(trip instanceof SkiTrip)
+        {
+            System.out.println("5. Type of gear");
+            System.out.println("6. Lift card price");
+        }
+        if(trip instanceof BeachTrip)
+        {
+            System.out.println("5. Beach name");
+            System.out.println("6. inflatable animals");
+        }
+
 
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -164,31 +175,60 @@ public class Main
         {
             case 1:
                 System.out.println("Enter the country:");
-                String newCountry = scanner.nextLine();
-                trip.country = newCountry;
+                trip.setCountry(scanner.nextLine());
                 break;
 
                 case 2:
                     System.out.println("Enter the duration:");
-                    int newDuration = scanner.nextInt();
+                    trip.setDuration(scanner.nextInt());
                     scanner.nextLine();
-                    trip.duration = newDuration;
                     break;
 
                     case 3:
                         System.out.println("Enter the date of departure:");
-                        int newDate = scanner.nextInt();
+                        trip.setDate(scanner.nextInt());
                         scanner.nextLine();
-                        trip.date = newDate;
                         break;
 
                         case 4:
                             System.out.println("Enter any planned adventures:");
-                            String newPlannedAdventures = scanner.nextLine();
-                            trip.adventures = newPlannedAdventures;
+                            trip.setAdventures(scanner.nextLine());
                             break;
+
+                            case 5:
+                                if (trip instanceof SkiTrip skiTrip)
+                                {
+                                    System.out.println("Enter new type of gear");
+                                    skiTrip.setTypeOfgear(scanner.nextLine());
+
+                                }
+                                else if(trip instanceof BeachTrip beachTrip)
+                                {
+                                    System.out.println("Enter a new beach:");
+                                    beachTrip.setBeachName(scanner.nextLine());
+                                }
+                                break;
+
+                                case 6:
+                                    if(trip instanceof SkiTrip skiTrip)
+                                    {
+                                        System.out.println("Enter a new price for liftcard");
+                                        skiTrip.setLiftCardPrice(scanner.nextInt());
+                                        scanner.nextLine();
+                                    }
+                                    else if(trip instanceof BeachTrip beachTrip)
+                                    {
+                                        System.out.println("Enter new status for inflatable animals");
+                                        beachTrip.setInflatableAnimal(scanner.nextBoolean());
+                                    }
+                                    break;
+
+                                    default: System.out.println("Invalid choice");
+                                    return;
         }
 
+
+        System.out.println("Trip succesfully updated.");
 
     }
 
