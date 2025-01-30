@@ -188,7 +188,7 @@ public class Main
                             trip.adventures = newPlannedAdventures;
                             break;
         }
-        
+
 
     }
 

@@ -22,6 +22,16 @@ public class SkiTrip extends Trip
         return liftCardPrice;
     }
 
+    public void setTypeOfgear(String typeOfgear)
+    {
+        this.typeOfgear = typeOfgear;
+    }
+
+    public void setLiftCardPrice(int liftCardPrice)
+    {
+        this.liftCardPrice = liftCardPrice;
+    }
+
     @Override
     public String toString()
     {

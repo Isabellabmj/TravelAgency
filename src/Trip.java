@@ -35,6 +35,26 @@ public class Trip
         return adventures;
     }
 
+    public void setCountry(String country)
+    {
+        this.country = country;
+    }
+
+    public void setDuration(int duration)
+    {
+        this.duration = duration;
+    }
+
+    public void setDate(int date)
+    {
+        this.date = date;
+    }
+
+    public void setAdventures(String adventures)
+    {
+        this.adventures = adventures;
+    }
+
 
 
 
