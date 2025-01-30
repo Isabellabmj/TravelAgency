@@ -141,7 +141,7 @@ public class Main
         int index = scanner.nextInt();
         scanner.nextLine();
 
-        if(index < 0 || index >= trips.size())
+        if(index < 1 || index >= trips.size())
         {
             System.out.println("error, try again");
 
@@ -199,7 +199,7 @@ public class Main
                                 if (trip instanceof SkiTrip skiTrip)
                                 {
                                     System.out.println("Enter new type of gear");
-                                    skiTrip.setTypeOfgear(scanner.nextLine());
+                                    skiTrip.setTypeOfGear(scanner.nextLine());
 
                                 }
                                 else if(trip instanceof BeachTrip beachTrip)

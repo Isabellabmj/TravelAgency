@@ -22,7 +22,7 @@ public class SkiTrip extends Trip
         return liftCardPrice;
     }
 
-    public void setTypeOfgear(String typeOfgear)
+    public void setTypeOfGear(String typeOfgear)
     {
         this.typeOfgear = typeOfgear;
     }
