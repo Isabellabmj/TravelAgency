@@ -5,10 +5,11 @@ import java.util.List;
 public class Main
 {
     private static List<Trip> trips = new ArrayList<>();
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args)
     {
-        Scanner scanner = new Scanner(System.in);
+
         boolean running = true;
 
         while(running)
@@ -17,7 +18,8 @@ public class Main
             System.out.println("1. add a skiing trip");
             System.out.println("2. add a beach trip");
             System.out.println("3. show all trips that you have planned");
-            System.out.println("4. finish");
+            System.out.println("4. edit a trip you have already planned");
+            System.out.println("5. finish");
 
             System.out.println("choose what you want to do");
 
@@ -40,6 +42,10 @@ public class Main
                         break;
 
                 case 4:
+                    editTrip();
+                    break;
+
+                case 5:
                     System.out.println("Goodbye");
                     running = false;
                         break;
@@ -117,12 +123,74 @@ public class Main
             System.out.println("planned trips:");
                 for(int i = 0; i < trips.size(); i++)
                 {
-                    System.out.println(trips.get(i).toString());
+                    System.out.println(i + 1 + ". " + trips.get(i));
                 }
         }
     }
 
+    public static void editTrip()
+    {
+        if(trips.isEmpty())
+        {
+            System.out.println("No trips to edit");
+            return;
+        }
 
+        showAllTrips();
+        System.out.println("Choose the number of the trip you want to edit: ");
+        int index = scanner.nextInt();
+        scanner.nextLine();
+
+        if(index < 0 || index >= trips.size())
+        {
+            System.out.println("error, try again");
+
+            return;
+        }
+
+        Trip trip = trips.get(index - 1);
+        System.out.println("You have chosen this trip to edit: " + "\n" + trip);
+
+        System.out.println("What do you want to edit:");
+        System.out.println("1. Country");
+        System.out.println("2. Duration");
+        System.out.println("3. Date");
+        System.out.println("4. Adventures");
+
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+
+        switch(choice)
+        {
+            case 1:
+                System.out.println("Enter the country:");
+                String newCountry = scanner.nextLine();
+                trip.country = newCountry;
+                break;
+
+                case 2:
+                    System.out.println("Enter the duration:");
+                    int newDuration = scanner.nextInt();
+                    scanner.nextLine();
+                    trip.duration = newDuration;
+                    break;
+
+                    case 3:
+                        System.out.println("Enter the date of departure:");
+                        int newDate = scanner.nextInt();
+                        scanner.nextLine();
+                        trip.date = newDate;
+                        break;
+
+                        case 4:
+                            System.out.println("Enter any planned adventures:");
+                            String newPlannedAdventures = scanner.nextLine();
+                            trip.adventures = newPlannedAdventures;
+                            break;
+        }
+        
+
+    }
 
 
 }
