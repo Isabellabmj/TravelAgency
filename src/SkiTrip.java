@@ -5,9 +5,9 @@ public class SkiTrip extends Trip
 
     public SkiTrip(){}
 
-    public SkiTrip(String country, int duration, String vacationType, String adventures, String typeOfGear, int liftCardPrice)
+    public SkiTrip(String country, int duration, int date, String adventures, String typeOfGear, int liftCardPrice)
     {
-        super(country, duration, vacationType, adventures);
+        super(country, duration, date, adventures);
         this.typeOfgear = typeOfGear;
         this.liftCardPrice = liftCardPrice;
     }
@@ -20,6 +20,17 @@ public class SkiTrip extends Trip
     public int getliftCardPrice()
     {
         return liftCardPrice;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Skitrip to:" + getCountry() + "\n"
+                + "for " + getDuration() + " days" + "\n"
+                + "departing date " + getDate() + "\n"
+                + "Planned adventures: " + getAdventures() + "\n"
+                + "with type of gear: " + typeOfgear + "\n"
+                + "and the lift card price is: " + liftCardPrice;
     }
 
 }

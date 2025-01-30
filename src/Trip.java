@@ -2,16 +2,16 @@ public class Trip
 {
     protected String country;
     protected int duration;
-    protected String vacationType;
+    protected int date;
     protected String adventures;
 
     public Trip(){}
 
-    public Trip(String country, int duration, String vacationType, String adventures)
+    public Trip(String country, int duration, int date, String adventures)
     {
         this.country = country;
         this.duration = duration;
-        this.vacationType = vacationType;
+        this.date = date;
         this.adventures = adventures;
     }
 
@@ -25,9 +25,9 @@ public class Trip
         return duration;
     }
 
-    public String getVacationType()
+    public int getDate()
     {
-        return vacationType;
+        return date;
     }
 
     public String getAdventures()

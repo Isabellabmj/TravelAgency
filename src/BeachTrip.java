@@ -5,9 +5,9 @@ public class BeachTrip extends Trip
 
     public BeachTrip(){}
 
-    public BeachTrip(String country, int duration, String vacationType, String adventures, String beachName, Boolean inflatableAnimal)
+    public BeachTrip(String country, int duration, int date, String adventures, String beachName, Boolean inflatableAnimal)
     {
-        super(country, duration, vacationType, adventures);
+        super(country, duration, date, adventures);
         this.beachName = beachName;
         this.inflatableAnimal = inflatableAnimal;
     }
@@ -20,5 +20,16 @@ public class BeachTrip extends Trip
     public Boolean getInflatableAnimal()
     {
         return inflatableAnimal;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Beach trip to: " + getCountry() + "\n"
+                + "duration: " + getDuration() + "\n"
+                + "date: " + getDate() + "\n"
+                + "planned adventures: " + getAdventures() + "\n"
+                + "beach names that you are planning to visit: " + beachName + "\n"
+                + "if you are bringing inflatable animal: " + inflatableAnimal + "\n";
     }
 }
