@@ -32,6 +32,8 @@ public class SkiTrip extends Trip
         this.liftCardPrice = liftCardPrice;
     }
 
+
+
     @Override
     public String toString()
     {

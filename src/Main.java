@@ -68,16 +68,21 @@ public class Main
         System.out.println("Plan a ski trip");
         System.out.println("enter the country:");
         String country = scanner.nextLine();
+
         System.out.println("enter the duration of the trip:");
         int duration = scanner.nextInt();
         scanner.nextLine();
+
         System.out.println("enter the date of departure:");
         int departure = scanner.nextInt();
         scanner.nextLine();
+
         System.out.println("enter any planned adventures:");
         String plannedAdventures = scanner.nextLine();
+
         System.out.println("enter whitch gear you are using (Ski/snowboard/other)");
         String gear = scanner.nextLine();
+
         System.out.println("enter the lift card price:");
         int liftCardPrice = scanner.nextInt();
         scanner.nextLine();
@@ -93,16 +98,21 @@ public class Main
         System.out.println("Plan a beach trip");
         System.out.println("Enter the country:");
         String country = scanner.nextLine();
+
         System.out.println("Enter the duration of the trip:");
         int duration = scanner.nextInt();
         scanner.nextLine();
+
         System.out.println("enter date of departure:");
         int departure = scanner.nextInt();
         scanner.nextLine();
+
         System.out.println("enter any planned adventures:");
         String plannedAdventures = scanner.nextLine();
+
         System.out.println("enter beach names you have planned to visit:");
         String beachNames = scanner.nextLine();
+
         System.out.println("Do you have any inflatable animals with you (true/false)");
         boolean inflatableAnimals = scanner.nextBoolean();
         scanner.nextLine();
@@ -148,7 +158,7 @@ public class Main
             return;
         }
 
-        Trip trip = trips.get(index - 1); //vi opretter en variabel trip, hvor vi kalder på et index nr. i Arraylisten trips, vi siger -1 fordi index altid starter med 0
+        Trip trip = trips.get(index - 1); //vi opretter en variabel: trip, hvor vi kalder på et index nr. i Arraylisten trips, vi siger -1 fordi index altid starter med 0
         System.out.println("You have chosen this trip to edit: " + "\n" + trip);
 
         System.out.println("What do you want to edit:");
